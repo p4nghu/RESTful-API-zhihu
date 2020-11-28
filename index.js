@@ -13,9 +13,9 @@ const router = new Router();
 
 
 
-parameter(app)
 app.use(error());
 app.use(bodyParser());
+app.use(parameter(app))
 app.use(router.routes());
 app.use(usersRouter.routes());
 
